@@ -1,11 +1,4 @@
-FROM node:11-alpine
-
+FROM node:14.15.4-alpine
 WORKDIR /application
-
+RUN apk update && apk add bash
 COPY . .
-
-RUN npm install
-
-# EXPOSE 3000
-
-# CMD ["npm", "run", "start"]
