@@ -1,0 +1,27 @@
+version: '3'
+services:
+  ui:
+    build:
+      context: ./frontend
+    container_name: react-container
+    ports:
+      - '80:5173'
+    command: 'npm run dev --  --host'
+    volumes:
+      - ./frontend:/application
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - .env
+
+  backend:
+    build:
+      context: ./backend
+    container_name: node-container
+    command: "npm run dev"
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./backend:/application    
+    env_file:
+      - .env
