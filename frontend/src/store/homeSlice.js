@@ -5,6 +5,7 @@ export const homeSlice = createSlice({
   name: "home",
   initialState:{
     url:{},
+    urlPath: "http://image.tmdb.org/t/p/original",
     genres:{}
   },
   reducers: {

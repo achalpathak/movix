@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {fetchDataFromApi} from './utils/api';
-import './App.css'
+// import './App.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { getApiConfiguration, getGenres } from './store/homeSlice';
 
@@ -19,19 +19,19 @@ function App() {
 	const dispatch = useDispatch()
 	const {url} = useSelector((state) => state.home)
 
-	useEffect(()=>{
-		apiTesting()
-	},[])
-	const apiTesting = () => {
-		fetchDataFromApi('/movie/popular')
-				.then((res)=> {
-					console.log(res);
-					dispatch(getApiConfiguration(res));
-				})
-	}
+	// useEffect(()=>{
+	// 	apiTesting()
+	// },[])
+	// const apiTesting = () => {
+	// 	fetchDataFromApi('/movie/popular')
+	// 			.then((res)=> {
+	// 				console.log(res);
+	// 				dispatch(getApiConfiguration(res));
+	// 			})
+	// }
 	return (
 		<BrowserRouter>
-            <Header />
+            {/* <Header /> */}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/:mediaType/:id" element={<Details />} />
@@ -39,7 +39,7 @@ function App() {
                 <Route path="/explore/:mediaType" element={<Explore />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
         </BrowserRouter>
 	)
 }

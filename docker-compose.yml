@@ -13,7 +13,6 @@ services:
       - NODE_ENV=development
     env_file:
       - .env
-    tty: true
 
   backend:
     build:
