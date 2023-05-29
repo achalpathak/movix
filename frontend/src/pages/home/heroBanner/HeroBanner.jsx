@@ -41,7 +41,7 @@ function HeroBanner() {
       <ContentWrapper>
         <div className="heroBannerContent">
           <span className="title">Welcome</span>
-          <span className="subtitle">Millions of movies, TV shows and people
+          <span className="subTitle">Millions of movies, TV shows and people
           to discover.
           Explore now.
           </span>

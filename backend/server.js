@@ -31,7 +31,7 @@ app.use(checkAuthorization);
 
 // simple route
 app.get("/", (req, res) => {
-    return res.json({ message: "Welcome to movix application." });
+    return res.json({ 'text': 'नमस्ते' });
 });
 
 app.get("/movie/upcoming", (req, res) => {
